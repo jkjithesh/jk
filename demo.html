@@ -1,0 +1,57 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Demo</title>
+    <script>
+        // First one with For of loop
+        function renderComponent() {
+            const products = ['orange', 'apple', 'watermelon'];
+
+            const list = []
+
+            for (const [i, product] of products.entries()) {
+                list.push(<li>{product}</li>)
+            }
+
+            return (
+                <div>
+                    {list}
+                </div>
+            )
+        }
+
+        function Parent(props) {
+            return renderProducts();
+        }
+
+        // Second with forEach method
+        function renderComponent() {
+            const products = ['orange', 'apple', 'watermelon'];
+
+            const list = []
+
+            products.forEach((product) => {
+                list.push(<li>{product}</li>)
+            })
+
+            return (
+                <div>
+                    {list}
+                </div>
+            )
+        }
+
+        function Parent(props) {
+            return renderProducts();
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
